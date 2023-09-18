@@ -1,0 +1,28 @@
+try {
+          // Define the data to send to the backend
+          const data = {
+            name: this.artistName,
+          };
+  
+          // Send a POST request to create a new artist
+          const response = await axios.post('/api/artists', data); // Adjust the endpoint as per your Laravel API routes
+  
+          // Assuming the backend returns the created artist, you can handle the response as needed
+          const createdArtist = response.data;
+  
+          // Optionally, you can redirect to the artist list or show a success message
+           this.$router.push('/artist-list');
+  
+          // Clear the input field after successful creation
+          this.artistName = '';
+  
+          // You can also emit an event or take other actions as needed
+  
+          console.log('New artist created:', createdArtist);
+        } catch (error) {
+          // Handle errors here
+          console.error('Error creating artist:', error);
+  
+          // You can also display an error message to the user
+           this.errorMessage = 'Failed to create artist';
+        }

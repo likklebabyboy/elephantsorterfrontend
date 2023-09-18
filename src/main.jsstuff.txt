@@ -1,0 +1,7 @@
+// app.component('CreateArtist', CreateArtist);
+// app.component('ArtistList', ArtistList);
+// app.component('ArtistDetail', ArtistDetail);
+
+import CreateArtist from './components/CreateArtist.vue';
+import ArtistList from './components/ArtistList.vue';
+import ArtistDetail from './views/ArtistDetail.vue';
